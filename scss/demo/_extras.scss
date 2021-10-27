@@ -1,0 +1,104 @@
+/* ----------------------------------------------------------------
+	Extra Styles
+-----------------------------------------------------------------*/
+.container-fluid {
+	overflow: hidden;
+}
+
+.menu-bars {
+	position: absolute;
+	left: 3rem;
+	top: 3.15rem;
+}
+
+.pagenation {
+	.pages {
+		p {
+			font-size: 1.875rem;
+			color: $theme-color;
+		}
+
+		span {
+			color: #dfd5ce;
+			font-size: 0.875rem;
+		}
+	}
+
+	&.collection {
+		position: absolute;
+		bottom: 3rem;
+		right: 2rem;
+	}
+
+	@include media-breakpoint-down(lg) {
+		display: none !important;
+	}
+}
+
+.page-links {
+	font-size: 1.125rem;
+	font-family: Gilroy-Medium;
+	color: $white;
+	text-transform: uppercase;
+	padding: 1.5rem 2rem;
+	background-color: #5f785d;
+	border-radius: 50%;
+	transform: rotate(345deg);
+	display: inline-block;
+
+	span {
+		display: block;
+		transform: rotate(15deg);
+	}
+
+	&:before {
+		content: "";
+		position: absolute;
+		top: -1.5rem;
+		width: 5rem;
+		height: 8rem;
+		border: 1px solid #5f785d;
+		border-radius: 50%;
+		transform: rotate(58deg);
+	}
+}
+
+.slick-slide {
+	height: auto;
+}
+
+.newarrivals {
+	@include media-breakpoint-up(lg) {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 100%;
+		z-index: -1;
+
+		.new-arrival-slick {
+			.slick-list {
+				padding: 0 11rem !important;
+			}
+
+			.slick-track {
+				margin-left: -11rem;
+			}
+		}
+	}
+}
+
+.about-product {
+	img {
+		width: 100%;
+	}
+
+	@include media-breakpoint-up(lg) {
+		position: absolute;
+		bottom: 3rem;
+		right: 0;
+
+		img {
+			width: calc(21vw - 5rem );
+		}
+	}
+}

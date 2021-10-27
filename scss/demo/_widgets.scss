@@ -1,0 +1,130 @@
+
+/* ----------------------------------------------------------------
+
+	widgets.scss
+
+-----------------------------------------------------------------*/
+
+
+/* ----------------------------------------------------------------
+	Widgets
+-----------------------------------------------------------------*/
+
+
+/* ----------------------------------------------------------------
+	Add here styles for widgets. Thanks!
+-----------------------------------------------------------------*/
+
+
+.widget {
+	position: relative;
+
+	.widget-title {	
+		color: #5f5f5e;
+		font-size: 1.125rem;
+		margin-bottom: 1.25rem;
+		font-family: Gilroy-Semibold;
+	}	
+
+	// Widget - Social
+	&.widget-social {
+		.widget-content {
+			.social-icons {
+				padding: 0;
+				list-style: none;
+	
+				li {
+					line-height: 1;
+					margin-bottom: 0.7rem;
+
+					a {		
+						font-size: 1.25rem;
+					}
+				}
+			}
+		}
+	}
+
+	// Widget - Links
+	&.widget-links {
+		ul {
+			list-style: none;
+
+			li {
+				line-height: 1;
+				margin-bottom: 1rem;
+				
+				a {
+					font-family: Gilroy-Medium;
+				}
+			}
+		}
+	}
+
+	// Widget - Payments
+	&.widget-payment {
+		p {
+			color: $white;
+			font-size: 1.125rem;
+			display: block;
+			font-family: $heading-font;
+		}
+		.payments {
+
+			.payment-icon {
+				display: inline-block;
+				vertical-align: middle;
+				margin-right: .5rem;
+				padding: 0.2rem;
+				background-size: 80% auto;
+				background-repeat: no-repeat;
+				background-position: center;
+				border-radius: 0.5rem ;
+
+				img {
+					width: 2rem;
+				}
+			}
+		}
+	}
+
+	// Widget - custom html
+	&.widget-custom-html {
+		.widget-content {
+			ul {
+				li {
+					margin-bottom: 0.5rem;
+
+					a {	
+						display: block;
+						color: #362e29;
+						font-family: Gilroy-Medium;
+		
+						&:hover {
+							color: $theme-color;
+						}
+					}
+				}
+			}
+		}
+	}
+
+
+	&.widget-subscribe {
+		.widget-content {
+			#widget-subscribe-form {
+				.input-group {
+					border-bottom: 1px solid #5a5a5a;
+				}
+
+				a {
+					font-size: 0.875rem;
+					font-weight: 700;
+					color: $dark;
+					display: flex;
+					align-items: center;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,238 @@
+
+/* ----------------------------------------------------------------
+
+	shop.scss
+
+-----------------------------------------------------------------*/
+
+
+/* ----------------------------------------------------------------
+	Shop
+-----------------------------------------------------------------*/
+
+
+/* ----------------------------------------------------------------
+	Add here styles for shop pages. Thanks!
+-----------------------------------------------------------------*/
+
+/* Product
+-----------------------------------------------------------------*/
+.category-menu {
+	ul {
+		li {
+			margin-bottom: .875rem;
+
+			a {
+				font-family: Gilroy-light;
+				font-size: 1.875rem;
+				color: #a19892;
+	
+				&:hover {
+					font-family: $body-font;
+					color: $theme-color;
+				}
+			}
+		}
+	}
+}
+
+.category-image {
+	img {
+		width: 100%;
+	}
+
+	@include media-breakpoint-up(lg) {
+		position: absolute;
+		right: 0;
+		top: 13rem;
+	
+		img {
+			width: calc(22vw - 5rem);
+		}
+	}
+}
+
+.products {
+	.slick-track {
+
+		@include media-breakpoint-up(lg) {
+			margin-left: -3rem;
+		}
+	}
+}
+
+.best-product {
+	.product-btn {
+		position: absolute;
+		top:2rem;
+		left: 2rem;
+	}
+
+	.product-details {
+		position: absolute;
+		left: 0;
+		bottom: 1rem;
+		width: 100%;
+	}
+}
+
+.product {
+	position: relative;
+	padding: 0.75rem;
+
+	.product-image {
+		position: relative;
+
+		img {
+			width: 100%;
+			margin: auto;
+		}
+
+		> a:nth-of-type(2) {
+			opacity: 0;
+			position: absolute;
+			z-index: -1;
+			top: 0;
+			left: 0;
+			right: 0;
+			@include transition(all 0.3s ease-in-out);
+		}
+	}
+
+	.product-details {
+		padding: 1.25rem 0;
+		z-index: 1;
+	}
+
+	.product-price {
+		font-family: Gilroy-Medium;
+		font-size: 1.125rem;
+		color: #362e29;
+
+		del {
+			font-weight: 600;
+			font-size: 1.125rem;
+		}
+	}
+
+	.product-title {
+		font-family: $body-font;
+		font-size: 1.125rem;
+		text-transform: uppercase;
+	}
+
+	.product-rating {
+		line-height: 1;
+		color: $secondary;
+		font-size: 0.875rem;
+
+		i {
+			color: #49413c;
+			font-size: 0.75rem;
+
+			&.empty {
+				color: rgba(#49413c, 0.5);
+			}
+		}
+	}
+
+	.product-info {
+		font-size: 1.125rem;
+		color: #4a4948;
+	}
+
+	&:hover {
+		.product-image {
+			> a:nth-of-type(2) {
+				z-index: 1;
+				opacity: 1;
+			}
+		}
+	}
+
+	.add-to-cart, .add-to-wishlist {
+		font-size: 1.25rem;
+		color: #423a36;
+
+		@include transition(all 0.3s ease-in-out);	
+
+		&:hover {
+			color: $theme-color;
+		}
+	}
+}
+
+.onhot {
+	font-family: Gilroy-Semibold;
+	font-size: 1rem;
+	padding: 0.25rem 1.25rem;
+	position: absolute;
+	background-color: #ffebeb;
+	text-transform: uppercase;
+	border-bottom-left-radius: 1rem;
+	top: 0.5rem;
+	right: 0.5rem;
+}
+
+.banner-product {
+	.onhot {
+		font-family: Gilroy-Semibold;
+		font-size: 0.75rem;
+		padding: 0.25rem 1.25rem;
+		position: absolute;
+		background-color: $white;
+		text-transform: uppercase;
+		border-bottom-left-radius: 1rem;
+		top: 0.5rem;
+		right: 0.5rem;
+	}
+}
+
+.ads {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+
+	.onsale {
+		font-size: 3.75rem;
+		font-family: $heading-font;
+		color: $white;
+		text-transform: uppercase;
+		padding: 2.5rem 4rem;
+		background-color: #5f785d;
+		border-radius: 50%;
+		transform: rotate(345deg);
+
+		span {
+			font-family: $body-font;
+			font-size: 1rem;
+			letter-spacing: 0.1rem;
+			display: block;
+		}
+
+		span, p {
+			transform: rotate(15deg);
+		}
+
+		&:before {
+			content: "";
+			position: absolute;
+			top: -2.8rem;
+			left: 3rem;
+			width: 11rem;
+			height: 16rem;
+			border: 1px solid #5f785d;
+			border-radius: 50%;
+			transform: rotate(58deg);
+		}
+	}
+
+	&.blog {
+		top: -7rem;
+
+		@include media-breakpoint-down(lg) {
+			display: none !important;
+		}
+	}
+}

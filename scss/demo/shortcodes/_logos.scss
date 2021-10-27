@@ -1,0 +1,16 @@
+.logos {
+	.logo-item {
+		position: relative;
+		max-width: 14.5rem;
+		height: 3rem;
+		display: flex !important;
+		justify-content: center;
+		margin-bottom: 3rem;
+		margin: auto;
+
+		img {
+			width: auto;
+			height: auto;
+		}
+	}
+} 
